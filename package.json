@@ -1,0 +1,16 @@
+{
+  "name": "gas-calculations",
+  "version": "1.0.0",
+  "description": "Gas calculation for scuba diving",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha",
+    "test-watch": "mocha -w"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^2.5.3"
+  }
+}
