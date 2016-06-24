@@ -27,3 +27,4 @@ Temporary Items
 
 # App specific
 node_modules/
+coverage/
