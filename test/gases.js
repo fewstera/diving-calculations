@@ -41,7 +41,13 @@ describe('Gas calculations', function() {
   });
 
   describe('bestMixEAD(ppo2, depth, ead)', function () {
-    it('should calculate best trimix from an EAD', function () {
+    it('should calculate best trimix mix assuming only nitrogren is narcotic from a given ppo2, actual depth and target equavilent depth', function () {
+        assert.deepEqual(gases.bestMixEAD(1.2, 70, 30),
+        {
+            'o2': 0.15,
+            'he': 0.46 
+        });
+
         assert.deepEqual(gases.bestMixEAD(1.4, 60, 30),
         {
             'o2': 0.20,
@@ -49,4 +55,26 @@ describe('Gas calculations', function() {
         });
     });
   });
+
+  describe('bestMixEND(ppo2, depth, end)', function () {
+    it('should calculate best trimix mix assuming both oxygen and nitrogen are narcotic using a given ppo2, actual depth and target equavilent depth', function () {
+        assert.deepEqual(gases.bestMixEND(1.4, 60, 30),
+        {
+            'o2': 0.20,
+            'he': 0.43 
+        });
+
+        assert.deepEqual(gases.bestMixEND(1.4, 40, 40),
+        {
+            'o2': 0.28,
+            'he': 0.0 
+        });
+
+        assert.deepEqual(gases.bestMixEND(1.2, 100, 30),
+        {
+            'o2': 0.10,
+            'he': 0.64
+        });
+    });
+  }); 
 });
