@@ -49,3 +49,14 @@ So:
 Add 31.3 bar helium
 Add 7 bar o2
 Top off air 144 bar 
+
+
+# We want 50% Nitrox 200bar from empty
+
+Nitrogen to add = 50%
+
+0.5 * 200 = 100 bar of Nitogren 
+100 / 0.79 =  126.58227848 Air bar
+
+126 bar Air
+74 bar O2
